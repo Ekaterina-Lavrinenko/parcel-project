@@ -1,9 +1,25 @@
 .our-program {
   background-image: linear-gradient(
     to bottom,
-    rgb(17, 21, 24) 88%,
-    rgb(255, 255, 255) 88%
+    rgb(17, 21, 24) 87.5%,
+    rgb(255, 255, 255) 87.5%
   );
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(17, 21, 24) 81%,
+      rgb(255, 255, 255) 81%
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(17, 21, 24) 83.5%,
+      rgb(255, 255, 255) 83.5%
+    );
+  }
 
   &__section-title {
     margin-bottom: 43px;
@@ -209,15 +225,15 @@
 
   &__picture {
     position: absolute;
-    bottom: 640px;
+    bottom: 745px;
     right: 0;
 
     @media screen and (min-width: 768px) {
-      bottom: 528px;
+      bottom: 561px;
     }
 
     @media screen and (min-width: 1280px) {
-      bottom: 234px;
+      bottom: 319px;
       left: 0;
     }
   }
@@ -271,7 +287,7 @@
       content: '';
       margin-bottom: 24px;
       width: 14px;
-      height: 1px;
+      height: 1.5px;
       background-color: var(--accent-color);
 
       @media screen and (min-width: 768px) {
@@ -292,10 +308,10 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 32px;
 
       @media screen and (min-width: 768px) {
-        margin-bottom: 30px;
+        margin-bottom: 42px;
       }
 
       @media screen and (min-width: 1280px) {
