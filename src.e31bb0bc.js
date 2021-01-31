@@ -189,11 +189,26 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\images\\hero\\vector-mobile.png":[["vector-mobile.c294d065.png","images/hero/vector-mobile.png"],"images/hero/vector-mobile.png"],"./..\\images\\hero\\vector-mobile@2x.png":[["vector-mobile@2x.a9f2aabe.png","images/hero/vector-mobile@2x.png"],"images/hero/vector-mobile@2x.png"],"./..\\images\\hero\\vector-tablet.png":[["vector-tablet.45506651.png","images/hero/vector-tablet.png"],"images/hero/vector-tablet.png"],"./..\\images\\hero\\vector-tablet@2x.png":[["vector-tablet@2x.c5fda78f.png","images/hero/vector-tablet@2x.png"],"images/hero/vector-tablet@2x.png"],"./..\\images\\hero\\vector-desktop.png":[["vector-desktop.af1f6097.png","images/hero/vector-desktop.png"],"images/hero/vector-desktop.png"],"./..\\images\\hero\\vector-desktop@2x.png":[["vector-desktop@2x.732fa20f.png","images/hero/vector-desktop@2x.png"],"images/hero/vector-desktop@2x.png"],"./..\\images\\registration\\registration-mobile@1x.png":[["registration-mobile@1x.f677ae3d.png","images/registration/registration-mobile@1x.png"],"images/registration/registration-mobile@1x.png"],"./..\\images\\registration\\registration@1x.png":[["registration@1x.b59a76e0.png","images/registration/registration@1x.png"],"images/registration/registration@1x.png"],"./..\\images\\registration\\registration-mobile@2x.png":[["registration-mobile@2x.b10dc8c8.png","images/registration/registration-mobile@2x.png"],"images/registration/registration-mobile@2x.png"],"./..\\images\\registration\\registration@2x.png":[["registration@2x.54018363.png","images/registration/registration@2x.png"],"images/registration/registration@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/menu.js":[function(require,module,exports) {
+(function () {
+  var menuBtnRef = document.querySelector("[data-menu-button]");
+  var mobileMenuRef = document.querySelector("[data-menu]");
+  var mobileLogoRef = document.querySelector("[data-menu-logo]");
+  menuBtnRef.addEventListener("click", function () {
+    var expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+    menuBtnRef.classList.toggle("is-open");
+    mobileLogoRef.classList.toggle("logo-reverse");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+    mobileMenuRef.classList.toggle("is-open");
+  });
+})();
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/menu");
+},{"./sass/main.scss":"sass/main.scss","./js/menu":"js/menu.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +236,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49337" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56335" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
