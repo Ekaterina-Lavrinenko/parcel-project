@@ -1,3 +1,7 @@
+.our-program .container {
+  position: relative;
+}
+
 .our-program {
   background-image: linear-gradient(
     to bottom,
@@ -225,16 +229,16 @@
 
   &__picture {
     position: absolute;
-    bottom: 745px;
+    bottom: 695px;
     right: 0;
 
     @media screen and (min-width: 768px) {
-      bottom: 561px;
+      bottom: 514px;
     }
 
     @media screen and (min-width: 1280px) {
-      bottom: 319px;
-      left: 0;
+      bottom: 268px;
+      left: -174px;
     }
   }
 }
