@@ -1,5 +1,6 @@
 .feature {
   padding-left: 40px;
+  padding-bottom: 50px;
 }
 
 .features__list {
@@ -17,7 +18,10 @@
 .features__item {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .features__svg {
@@ -41,7 +45,6 @@
   }
 
   .features__item {
-    margin-bottom: 50px;
     margin-left: 0;
 
     &:not(:last-child) {
@@ -57,6 +60,9 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .feature {
+    padding-bottom: 130px;
+  }
   .features__svg_desc {
     display: block;
     max-width: 100px;
@@ -83,6 +89,5 @@
 
   .features__item {
     margin-top: 50px;
-    margin-bottom: 130px;
   }
 }
