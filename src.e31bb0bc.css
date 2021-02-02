@@ -88,7 +88,6 @@ li {
   }
 }
 .section.our-program {
-  position: relative;
   padding: 50px 0;
 }
 @media screen and (min-width: 1280px) {
@@ -102,7 +101,7 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   width: 100px;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 18px;
   line-height: 1.23;
   letter-spacing: 0.04em;
@@ -469,6 +468,7 @@ li {
     padding-top: 125px;
     max-width: 1688px;
     min-height: 883px;
+    overflow-x: hidden;
   }
 }
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
@@ -628,6 +628,7 @@ li {
 
 .feature {
   padding-left: 40px;
+  padding-bottom: 50px;
 }
 
 .features__list {
@@ -645,7 +646,6 @@ li {
 .features__item {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .features__svg {
@@ -659,6 +659,11 @@ li {
   display: none;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .feature {
     padding-left: 0px;
@@ -669,7 +674,6 @@ li {
   }
 
   .features__item {
-    margin-bottom: 50px;
     margin-left: 0;
   }
   .features__item:not(:last-child) {
@@ -682,6 +686,10 @@ li {
   }
 }
 @media screen and (min-width: 1280px) {
+  .feature {
+    padding-bottom: 130px;
+  }
+
   .features__svg_desc {
     display: block;
     max-width: 100px;
@@ -708,7 +716,6 @@ li {
 
   .features__item {
     margin-top: 50px;
-    margin-bottom: 130px;
   }
 }
 .problems__section {
@@ -1032,6 +1039,7 @@ li {
 @media screen and (min-width: 1280px) {
   .realization {
     padding-top: 131px;
+    padding-bottom: 131px;
   }
 
   .realization__header {
@@ -1061,6 +1069,10 @@ li {
     margin: 0;
   }
 }
+.our-program .container {
+  position: relative;
+}
+
 .our-program {
   background-image: linear-gradient(to bottom, #111518 87.5%, white 87.5%);
 }
@@ -1290,18 +1302,18 @@ li {
 }
 .our-program__picture {
   position: absolute;
-  bottom: 745px;
+  bottom: 695px;
   right: 0;
 }
 @media screen and (min-width: 768px) {
   .our-program__picture {
-    bottom: 561px;
+    bottom: 514px;
   }
 }
 @media screen and (min-width: 1280px) {
   .our-program__picture {
-    bottom: 319px;
-    left: 0;
+    bottom: 268px;
+    left: -174px;
   }
 }
 
@@ -1629,7 +1641,7 @@ ol {
     margin-bottom: 50px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .teacher_left_side {
     width: 641px;
   }
@@ -1862,7 +1874,7 @@ ol {
 @media screen and (min-width: 1280px) {
   .reviews__title {
     margin-bottom: 50px;
-    font-style: 46px;
+    font-size: 46px;
   }
 }
 
@@ -2088,6 +2100,8 @@ ol {
   background-size: cover;
   background-position: center;
   padding: 50px 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .registration {

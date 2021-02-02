@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\hero\\vector-mobile.png":[["vector-mobile.c294d065.png","images/hero/vector-mobile.png"],"images/hero/vector-mobile.png"],"./..\\images\\hero\\vector-mobile@2x.png":[["vector-mobile@2x.a9f2aabe.png","images/hero/vector-mobile@2x.png"],"images/hero/vector-mobile@2x.png"],"./..\\images\\hero\\vector-tablet.png":[["vector-tablet.45506651.png","images/hero/vector-tablet.png"],"images/hero/vector-tablet.png"],"./..\\images\\hero\\vector-tablet@2x.png":[["vector-tablet@2x.c5fda78f.png","images/hero/vector-tablet@2x.png"],"images/hero/vector-tablet@2x.png"],"./..\\images\\hero\\vector-desktop.png":[["vector-desktop.af1f6097.png","images/hero/vector-desktop.png"],"images/hero/vector-desktop.png"],"./..\\images\\hero\\vector-desktop@2x.png":[["vector-desktop@2x.732fa20f.png","images/hero/vector-desktop@2x.png"],"images/hero/vector-desktop@2x.png"],"./..\\images\\registration\\registration-mobile@1x.png":[["registration-mobile@1x.f677ae3d.png","images/registration/registration-mobile@1x.png"],"images/registration/registration-mobile@1x.png"],"./..\\images\\registration\\registration@1x.png":[["registration@1x.b59a76e0.png","images/registration/registration@1x.png"],"images/registration/registration@1x.png"],"./..\\images\\registration\\registration-mobile@2x.png":[["registration-mobile@2x.b10dc8c8.png","images/registration/registration-mobile@2x.png"],"images/registration/registration-mobile@2x.png"],"./..\\images\\registration\\registration@2x.png":[["registration@2x.54018363.png","images/registration/registration@2x.png"],"images/registration/registration@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/menu.js":[function(require,module,exports) {
+},{"./../images/hero/vector-mobile.png":[["vector-mobile.c294d065.png","images/hero/vector-mobile.png"],"images/hero/vector-mobile.png"],"./../images/hero/vector-mobile@2x.png":[["vector-mobile@2x.a9f2aabe.png","images/hero/vector-mobile@2x.png"],"images/hero/vector-mobile@2x.png"],"./../images/hero/vector-tablet.png":[["vector-tablet.45506651.png","images/hero/vector-tablet.png"],"images/hero/vector-tablet.png"],"./../images/hero/vector-tablet@2x.png":[["vector-tablet@2x.c5fda78f.png","images/hero/vector-tablet@2x.png"],"images/hero/vector-tablet@2x.png"],"./../images/hero/vector-desktop.png":[["vector-desktop.af1f6097.png","images/hero/vector-desktop.png"],"images/hero/vector-desktop.png"],"./../images/hero/vector-desktop@2x.png":[["vector-desktop@2x.732fa20f.png","images/hero/vector-desktop@2x.png"],"images/hero/vector-desktop@2x.png"],"./../images/registration/registration-mobile@1x.png":[["registration-mobile@1x.f677ae3d.png","images/registration/registration-mobile@1x.png"],"images/registration/registration-mobile@1x.png"],"./../images/registration/registration@1x.png":[["registration@1x.b59a76e0.png","images/registration/registration@1x.png"],"images/registration/registration@1x.png"],"./../images/registration/registration-mobile@2x.png":[["registration-mobile@2x.b10dc8c8.png","images/registration/registration-mobile@2x.png"],"images/registration/registration-mobile@2x.png"],"./../images/registration/registration@2x.png":[["registration@2x.54018363.png","images/registration/registration@2x.png"],"images/registration/registration@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/menu.js":[function(require,module,exports) {
 (function () {
   var menuBtnRef = document.querySelector("[data-menu-button]");
   var mobileMenuRef = document.querySelector("[data-menu]");
@@ -202,13 +202,48 @@ module.hot.accept(reloadCSS);
     mobileMenuRef.classList.toggle("is-open");
   });
 })();
+},{}],"js/scrolling.js":[function(require,module,exports) {
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var anchors = document.querySelectorAll('a[href*="#"]');
+
+var _iterator = _createForOfIteratorHelper(anchors),
+    _step;
+
+try {
+  var _loop = function _loop() {
+    var anchor = _step.value;
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      var blockID = anchor.getAttribute('href').substr(1);
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  };
+
+  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+    _loop();
+  }
+} catch (err) {
+  _iterator.e(err);
+} finally {
+  _iterator.f();
+}
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
 
 require("./js/menu");
-},{"./sass/main.scss":"sass/main.scss","./js/menu":"js/menu.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/scrolling");
+},{"./sass/main.scss":"sass/main.scss","./js/menu":"js/menu.js","./js/scrolling":"js/scrolling.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -236,7 +271,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56335" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55152" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
