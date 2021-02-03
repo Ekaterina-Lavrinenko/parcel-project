@@ -565,8 +565,10 @@ li {
   }
 }
 
-.hero__button {
-  margin: 0 auto;
+@media screen and (max-width: 767px) {
+  .hero__button {
+    margin: 0 auto;
+  }
 }
 
 .hero-points {
@@ -632,6 +634,12 @@ li {
   .hero-img-picture {
     top: -3px;
     left: 57px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-img-picture {
+    top: -25px;
+    left: 100px;
   }
 }
 
@@ -2098,6 +2106,12 @@ ol {
   border: none;
   cursor: pointer;
   background-color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__picture img {
+    display: inline-block;
+  }
 }
 
 .registration {
