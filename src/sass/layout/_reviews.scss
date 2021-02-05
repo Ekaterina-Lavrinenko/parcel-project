@@ -28,13 +28,22 @@
   }
 }
 
+/* Slider */
+
+.slider {
+  min-width: 0;
+  position: relative;
+}
+
 .reviews__thumb-card {
+  min-width: 0;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
   @media screen and (max-width: 767px) {
     padding: 20px 20px 30px 20px;
     margin-bottom: 20px;
   }
+
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     margin-bottom: 30px;
     padding: 40px;
@@ -88,6 +97,14 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.reviews__thumb-img {
+  width: 90px;
+
+  @media screen and (min-width: 768px) {
+    width: 150px;
+  }
 }
 
 .reviews__link {
@@ -176,7 +193,7 @@
   color: var(--accent-color);
   text-decoration: revert;
 
-    transition: color var(--anitation-function);
+  transition: color var(--anitation-function);
 
   &:hover,
   &:focus {
@@ -184,107 +201,244 @@
   }
 }
 
-.reviews__slider {
-  @media screen and (max-width: 767px) {
-    position: relative;
-  }
-}
+// .reviews__slider {
+//   @media screen and (max-width: 767px) {
+//     position: relative;
+//   }
+// }
 
 .reviews__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+
+  & .slick-list {
+    overflow: hidden;
+    width: 182px;
+    margin: 0 auto;
+
+    @media screen and(min-width: 768px) {
+      width: 558px;
+    }
+  }
 }
 
 .reviews__item {
-  display: flex;
-}
+  width: 54px;
+  height: 54px;
 
-.reviews__item:nth-child(n + 4) {
-  @media screen and (max-width: 767px) {
-    display: none;
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &.slick-current .wrapper__img {
+    border: 2px solid #ff6b09;
   }
 }
 
-.reviews__item:not(:first-child) {
-  @media screen and (max-width: 767px) {
-    margin-left: 10px;
-  }
+// .reviews__item:nth-child(n + 4) {
+//   @media screen and (max-width: 767px) {
+//     display: none;
+//   }
+// }
 
-  @media screen and (min-width: 768px) {
-    margin-left: 30px;
-  }
+.reviews__img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
 }
 
-.reviews__button {
-  padding: 0;
-  margin: 0;
-  
-  
-  transform: scale(1);
-  transition: scale var(--anitation-function);
+// .reviews__item:not(:first-child) {
+//   @media screen and (max-width: 767px) {
+//     margin-left: 10px;
+//   }
 
-  &:hover,
-  &:focus {
-    transform: scale(1.2);
-  }
-}
+//   @media screen and (min-width: 768px) {
+//     margin-left: 30px;
+//   }
+// }
 
-.reviews__buttom-icon {
-  display: flex;
-}
+// .reviews__button {
+// padding: 0;
+// margin: 0;
+//   border-radius: 50%;
+//   border: transparent;
 
-.reviews__arrow {
-  margin: 0;
-  padding: 0;
-  position: absolute;
+//   transform: scale(1);
+//   transition: scale var(--anitation-function);
 
-  top: 50%;
-  transform: translateY(-50%) scale(1.0);
-  transition: scale var(--anitation-function);
+//   &:hover,
+//   &:focus {
+//     transform: scale(1.2);
+//     border: var(--accent-color);
+//   }
+// }
 
-  &:hover,
-  &:focus {
-    transform: translateY(-50%) scale(1.2);
-  }
-}
+// .reviews__button-icon {
+//   display: flex;
+// }
 
-.reviews__arrow--left {
-  @media screen and (max-width: 767px) {
-    left: 0;
-  }
+// .reviews__arrow {
+//   margin: 0;
+//   padding: 0;
+//   position: absolute;
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    left: -12px;
-  }
+//   top: 50%;
+//   transform: translateY(-50%) scale(1);
+//   transition: scale var(--anitation-function);
 
-  @media screen and (min-width: 1280px) {
-    left: -85px;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     transform: translateY(-50%) scale(1.2);
+//   }
+// }
 
-.reviews__arrow--right {
-  @media screen and (max-width: 767px) {
-    right: 0;
-  }
+// .reviews__arrow--left {
+//   @media screen and (max-width: 767px) {
+//     left: 0;
+//   }
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    right: -12px;
-  }
+//   @media screen and (min-width: 768px) and (max-width: 1279px) {
+//     left: -12px;
+//   }
 
-  @media screen and (min-width: 1280px) {
-    right: -85px;
-  }
-}
+//   @media screen and (min-width: 1280px) {
+//     left: -85px;
+//   }
+// }
+
+// .reviews__arrow--right {
+//   @media screen and (max-width: 767px) {
+//     right: 0;
+//   }
+
+//   @media screen and (min-width: 768px) and (max-width: 1279px) {
+//     right: -12px;
+//   }
+
+//   @media screen and (min-width: 1280px) {
+//     right: -85px;
+//   }
+// }
 
 .reviews__button,
 .reviews__arrow {
   border: none;
   cursor: pointer;
   background-color: inherit;
-
 }
-.reviews__picture img{
-  @media screen  and (max-width: 768px){
+.reviews__picture img {
+  @media screen and (max-width: 768px) {
     display: inline-block;
+  }
+}
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick .slick-dots {
+  // display: flex;
+}
+.slick .slick-dots li {
+}
+/* Активная точка */
+.slick .slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick .slick-dots li button {
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  bottom: -37px;
+  width: 27px;
+  height: 16px;
+  z-index: 91;
+  font-size: 0;
+
+  @media screen and (min-width: 768px) {
+    top: 150px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 168px;
+  }
+}
+
+.slider .slick-arrow.slick-prev {
+  left: -2px;
+  background: url('./../images/reviews/arrow-left.svg') 0 0 / 100% no-repeat;
+
+  @media screen and (min-width: 768px) {
+    left: -14px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: -86px;
+  }
+}
+
+.slider .slick-arrow.slick-next {
+  right: -2px;
+  background: url('./../images/reviews/arrow-right.svg') 0 0 / 100% no-repeat;
+
+  @media screen and (min-width: 768px) {
+    right: -14px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: -86px;
   }
 }
