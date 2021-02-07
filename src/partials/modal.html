@@ -1,0 +1,85 @@
+<!-- Modal -->
+<div class="backdrop backdrop--hidden" data-modal>
+  <div class="modal-wrap">
+    <div class="modal">
+      <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+
+      <form class="modal-form">
+        <label class="modal-form__label"
+          >Имя
+          <span class="input-wrapper">
+            <input
+              type="text"
+              class="modal-form__input"
+              name="user-name"
+              required
+            />
+            <svg class="modal-form__icon" width="18px" height="18px">
+              <use href="./images/sprite.svg#user"></use>
+            </svg>
+          </span>
+        </label>
+        <label class="modal-form__label"
+          >Телефон
+          <span class="input-wrapper">
+            <input
+              type="tel"
+              class="modal-form__input"
+              name="user-tel"
+              required
+            />
+            <svg class="modal-form__icon" width="18px" height="18px">
+              <use href="./images/sprite.svg#phone"></use>
+            </svg>
+          </span>
+        </label>
+        <label class="modal-form__time"
+          ><span class="modal-form__desc">Во сколько вам перезвонить?</span>
+          <span class="modal-form__time-inner">
+            <input
+              type="time"
+              name="user-time"
+              class="modal-form__input-time"
+              min="08:00"
+              max="20:00"
+              list="datetime"
+            />
+            <datalist id="datetime">
+              <option value="8:00"></option>
+              <option value="9:00"></option>
+              <option value="10:00"></option>
+              <option value="11:00"></option>
+              <option value="12:00"></option>
+              <option value="13:00"></option>
+              <option value="14:00"></option>
+              <option value="15:00"></option>
+              <option value="16:00"></option>
+              <option value="17:00"></option>
+              <option value="18:00"></option>
+              <option value="19:00"></option>
+              <option value="20:00"></option>
+            </datalist>
+          </span>
+        </label>
+        <input
+          type="checkbox"
+          class="modal-form__checkbox visually-hidden"
+          name="policy-field"
+          value="accept-policy"
+          id="policy"
+        />
+
+        <label for="policy" class="modal-form__policy-label"
+          >Соглашаюсь на обработку персональных данных</label
+        >
+        <button type="submit" class="button">Перезвоните мне</button>
+      </form>
+
+      <button type="button" class="close-btn" data-modal-close>
+        <svg class="icon-cross" width="20px" height="20px">
+          <use href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
