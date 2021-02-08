@@ -110,6 +110,7 @@
   height: 48px;
   border: 1px solid #ffffff;
   background-color: transparent;
+  box-shadow: 2px 5px 10px rgb(0 0 0 / 30%);
   font-weight: 600;
   font-size: 14px;
   line-height: 1.21;
@@ -133,8 +134,16 @@
 
   &:focus {
     outline: none;
-    border-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
   }
+}
+
+.registration-form__input:not(:placeholder-shown):valid {
+  border: 2px solid #006400;
+}
+
+.registration-form__input:not(:placeholder-shown):invalid {
+  border: 2px solid #8b0000;
 }
 
 .registration-form__input-name {
